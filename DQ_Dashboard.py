@@ -276,11 +276,11 @@ def featureclick(ShowMode,features,featurevals,featurename,curr_df,dtypes,missin
             typecheck = dtypes.value
             checkissing = missing.value
            
-            if (checkissing[checkissing.find('-')+1:] == '0') and (len(curr_df[curr_df.columns[optind]].unique())) <= 250:
+            if (checkissing[checkissing.find('-')+1:] == '0') & (len(curr_df[curr_df.columns[optind]].unique())) <= 250:
              
                 featurevals.options = [x for x in curr_df[curr_df.columns[optind]].unique()]
               
-                if (typecheck[typecheck.find('-')+1:] == 'float64') or (typecheck[typecheck.find('-')+1:] == 'int64'):
+                if (typecheck[typecheck.find('-')+1:] == 'float64') | (typecheck[typecheck.find('-')+1:] == 'int64'):
                     featurevals.options = sorted(featurevals.options, key=lambda x: x, reverse=False)
                     ratiosum =sum([len(curr_df[curr_df[curr_df.columns[optind]] == x])/datasize for x in featurevals.options])
               
@@ -299,10 +299,10 @@ def featureclick(ShowMode,features,featurevals,featurename,curr_df,dtypes,missin
         with HCPage:
             clear_output()
             
-            if (typecheck[typecheck.find('-')+1:] == 'float64') or (typecheck[typecheck.find('-')+1:] == 'int64'):
+            if (typecheck[typecheck.find('-')+1:] == 'float64') | (typecheck[typecheck.find('-')+1:] == 'int64'):
                 sns.distplot(curr_df[curr_df.columns[optind]]).set_title('Histogram of feature '+curr_df.columns[optind])
                 plt.show()
-            if (typecheck[typecheck.find('-')+1:] == 'object') or (typecheck[typecheck.find('-')+1:] == 'string'):
+            if (typecheck[typecheck.find('-')+1:] == 'object') | (typecheck[typecheck.find('-')+1:] == 'string'):
                 
                 nrclasses = len(curr_df[curr_df.columns[optind]].unique())
                 if nrclasses < 250:
