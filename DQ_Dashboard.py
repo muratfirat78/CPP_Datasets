@@ -20,7 +20,7 @@ from pathlib import Path
 
 warnings.filterwarnings("ignore")
 
-online_version = True
+
 file_names = {'csv':['apple_quality','aug_train','diet','housing','loan_data','worldcities','flight_data','titanic','Telecom_Churn']}
 file_names['xlsx'] = ['crop_yield']
 file_names['tsv'] = ['gapminder']
