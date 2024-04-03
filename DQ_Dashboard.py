@@ -127,10 +127,12 @@ def on_submitfunc(online_version,datasets):
     dtsetnames = [] 
     
     if online_version: 
+
+        directory_files = os.listdir('/content/CPP_Datasets')
        
-        for ftype,files in file_names.items():
-            for file in files:
-                dtsetnames.append(file+'.'+ftype)         
+        for file in directory_files:
+            if (file.find('.csv')>-1) or (file.find('.xlsx')>-1) or(file.find('.tsv')>-1):
+                dtsetnames.append(file)
     else:
         
         rel_path = DataFolder.value
@@ -268,6 +270,8 @@ def featureclick(ShowMode,features,featurevals,featurename,curr_df,dtypes,missin
     
     if features.value == None:
         return
+    
+    
     
     
     featurename.value = 'Selected Feature: '+features.value
