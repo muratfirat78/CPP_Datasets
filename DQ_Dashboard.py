@@ -268,6 +268,9 @@ def featureclick(ShowMode,features,featurevals,featurename,curr_df,dtypes,missin
     if len(features.options) == 0:
         return
     
+    if features.value == None:
+        return
+    
     
     featurename.value = 'Selected Feature: '+features.value
     ratiosum = 0
