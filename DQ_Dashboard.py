@@ -18,6 +18,8 @@ import os
 from pathlib import Path
 
 
+
+colabpath = '/content/CPP_Datasets'
 warnings.filterwarnings("ignore")
 
 
@@ -80,7 +82,7 @@ def read_data_set(foldername,filename,sheetname,reslay,resultexp,processtypes,Fe
 
 
 ################################################################################################################
-def File_Click(foldername,filename,wsheets,wslay,butlay):
+def File_Click(online_version,foldername,filename,wsheets,wslay,butlay):
     
     # filename = datasets.value
     # foldername = DataFolder.value
@@ -90,7 +92,7 @@ def File_Click(foldername,filename,wsheets,wslay,butlay):
     abs_file_path = ''
     
     if online_version:
-        abs_file_path = "https://github.com/muratfirat78/CPP_Datasets/raw/main/"+filename
+        abs_file_path = colabpath+'/'+filename
     else:
         rel_path = foldername+'\\'+filename
         script_dir = Path.cwd()
@@ -128,7 +130,7 @@ def on_submitfunc(online_version,datasets):
     
     if online_version: 
 
-        directory_files = os.listdir('/content/CPP_Datasets')
+        directory_files = os.listdir(colabpath)
        
         for file in directory_files:
             if (file.find('.csv')>-1) or (file.find('.xlsx')>-1) or(file.find('.tsv')>-1):
