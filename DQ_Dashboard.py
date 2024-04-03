@@ -262,6 +262,7 @@ def featureclick(ShowMode,features,featurevals,featurename,curr_df,dtypes,missin
         return
     
 
+    print('In featureclick...')
     
     featurename.value = 'Selected Feature: '+features.value
     ratiosum = 0
