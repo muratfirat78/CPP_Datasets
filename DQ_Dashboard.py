@@ -288,7 +288,7 @@ def featureclick(ShowMode,features,featurevals,featurename,curr_df,dtypes,missin
             typecheck = dtypes.value
             checkissing = missing.value
            
-            if (checkissing[checkissing.find('-')+1:] == '0') and len(curr_df[curr_df.columns[optind]].unique()) <= 250:
+            if (checkissing[checkissing.find('-')+1:] == '0') and (len(curr_df[curr_df.columns[optind]].unique())) <= 250:
              
                 featurevals.options = [x for x in curr_df[curr_df.columns[optind]].unique()]
               
