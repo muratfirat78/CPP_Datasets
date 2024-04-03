@@ -262,8 +262,8 @@ def featureclick(ShowMode,features,featurevals,featurename,curr_df,dtypes,missin
     
     if curr_df == None:
         return
-    
-    if len(curr_df) == 0:
+   
+    if len(features.options) == 0:
         return
     
     
