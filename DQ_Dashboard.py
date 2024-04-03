@@ -29,7 +29,7 @@ file_names['tsv'] = ['gapminder']
 
 #######################################################################################################################
 
-def read_data_set(foldername,filename,sheetname,reslay,resultexp,processtypes,FeatPage,ProcssPage,DFPage):
+def read_data_set(online_version,foldername,filename,sheetname,reslay,resultexp,processtypes,FeatPage,ProcssPage,DFPage):
     
    
     
@@ -40,7 +40,7 @@ def read_data_set(foldername,filename,sheetname,reslay,resultexp,processtypes,Fe
     rel_path = foldername+'\\'+filename
     
     if online_version:
-        abs_file_path = "https://github.com/muratfirat78/CPP_Datasets/raw/main/"+filename
+        abs_file_path = colabpath+'/'+filename
     else:
         abs_file_path = os.path.join(Path.cwd(), rel_path)
         
