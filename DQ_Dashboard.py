@@ -257,6 +257,9 @@ def featureclick(ShowMode,features,featurevals,featurename,curr_df,dtypes,missin
     if not ShowMode:
         return
     
+    if len(dtypes.options) == 0:
+        return
+    
 
     featurevals.options = []
     featurename.value = 'Selected Feature: '+features.value
