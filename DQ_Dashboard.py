@@ -523,6 +523,11 @@ def make_scaling(curr_df,features2,ProcssPage,scalingacts):
   
     colname = features2.value
     
+    if (curr_df[colname].dtype == 'object') or (curr_df[colname].dtype== 'string'):
+        with ProcssPage:
+            clear_output()
+            display.display('Selected column is not a numerical type..')
+        return
     
     if scalingacts.value == 'Standardize':
         curr_df =  StandardizeColumn(curr_df,colname)
