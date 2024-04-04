@@ -29,7 +29,7 @@ file_names['tsv'] = ['gapminder']
 
 #######################################################################################################################
 
-def read_data_set(online_version,foldername,filename,sheetname,reslay,resultexp,processtypes,FeatPage,ProcssPage,DFPage):
+def read_data_set(curr_df,online_version,foldername,filename,sheetname,reslay,resultexp,processtypes,FeatPage,ProcssPage,DFPage):
     
    
     
@@ -47,11 +47,11 @@ def read_data_set(online_version,foldername,filename,sheetname,reslay,resultexp,
 
     if abs_file_path.find('.csv') > -1:
         curr_df = pd.read_csv(abs_file_path, sep=sheetname) 
-    if abs_file_path.find('.xlsx') > -1:
+    if (abs_file_path.find('.xlsx') > -1) or (filename.find('.xls') > -1):
         xls = pd.ExcelFile(abs_file_path)
         curr_df = pd.read_excel(xls,sheetname)
     if abs_file_path.find('.tsv') > -1:    
-        print(abs_file_path)
+       
         curr_df = pd.read_csv(abs_file_path, sep="\t")
         
     curr_df.convert_dtypes()
@@ -107,7 +107,7 @@ def File_Click(online_version,foldername,filename,wsheets,wslay,butlay):
         wsheets.description = 'Separator'
         wsheets.options = ['\\t']
         
-    if filename.find('.xlsx') > -1:
+    if (filename.find('.xlsx') > -1) or (filename.find('.xls') > -1) :
  
         wsheets.description = 'Worksheets'
         xls = pd.ExcelFile(abs_file_path)
@@ -124,7 +124,9 @@ def File_Click(online_version,foldername,filename,wsheets,wslay,butlay):
 ##################################################################################################################
 #########################################################################################################
 
-def on_submitfunc(online_version,datasets):
+def on_submitfunc(online_version,foldername,datasets):
+    
+    #  foldername = DataFolder.value
     
     dtsetnames = [] 
     
@@ -133,18 +135,18 @@ def on_submitfunc(online_version,datasets):
         directory_files = os.listdir(colabpath)
        
         for file in directory_files:
-            if (file.find('.csv')>-1) or (file.find('.xlsx')>-1) or(file.find('.tsv')>-1):
+            if (file.find('.csv')>-1) or (file.find('.xlsx')>-1) or (file.find('.xls')>-1) or(file.find('.tsv')>-1):
                 dtsetnames.append(file)
     else:
         
-        rel_path = DataFolder.value
+        rel_path = foldername
         abs_file_path = os.path.join(Path.cwd(), rel_path)
 
         
         for root, dirs, files in os.walk(abs_file_path):
             for file in files:
 
-                if (file.find('.csv')>-1) or (file.find('.xlsx')>-1) or(file.find('.tsv')>-1):
+                if (file.find('.csv')>-1) or (file.find('.xlsx')>-1)or (file.find('.xls')>-1)  or(file.find('.tsv')>-1):
                     dtsetnames.append(file)
 
 
@@ -266,14 +268,21 @@ def featureclick(ShowMode,features,featurevals,featurename,curr_df,dtypes,missin
     ratiosum = 0
     optind = 0
     datasize = len(curr_df)
+    
+  
+    
     for opt in features.options:
         if features.value == opt:
+           
             dtypes.value = dtypes.options[optind]
             missing.value = missing.options[optind]
             misshands.value = misshands.options[optind]
             typecheck = dtypes.value
             checkissing = missing.value
-           
+            break
+            
+            
+            '''
             if (checkissing[checkissing.find('-')+1:] == '0') & (len(curr_df[curr_df.columns[optind]].unique())) <= 250:
              
                 featurevals.options = [x for x in curr_df[curr_df.columns[optind]].unique()]
@@ -284,32 +293,13 @@ def featureclick(ShowMode,features,featurevals,featurename,curr_df,dtypes,missin
               
                 featurevals.options = [str(x)+' ('+str(round(100*len(curr_df[curr_df[curr_df.columns[optind]] == x])/datasize,3))+'%)' for x in featurevals.options]       
                 featurevals.value = featurevals.options[0]
+            '''
 
-            break
+           
         optind+=1
         
    
-    checkissing = missing.value
-    typecheck = dtypes.value
-  
-    
-    if checkissing[checkissing.find('-')+1:] == '0':
-        with HCPage:
-            clear_output()
-            
-            if (typecheck[typecheck.find('-')+1:] == 'float64') | (typecheck[typecheck.find('-')+1:] == 'int64'):
-                sns.distplot(curr_df[curr_df.columns[optind]]).set_title('Histogram of feature '+curr_df.columns[optind])
-                plt.show()
-            if (typecheck[typecheck.find('-')+1:] == 'object') | (typecheck[typecheck.find('-')+1:] == 'string'):
-                
-                nrclasses = len(curr_df[curr_df.columns[optind]].unique())
-                if nrclasses < 250:
-                    g = sns.countplot(curr_df, x=curr_df.columns[optind])
-                    g.set_xticklabels(g.get_xticklabels(),rotation= 45)
-                    #sns.distplot(curr_df[curr_df.columns[optind]]).set_title('Histogram of feature '+curr_df.columns[optind])
-                    plt.show()
-                else:
-                    display.display('Number of classes: ',nrclasses)
+   
 
     return
 
