@@ -479,12 +479,7 @@ def featureprclick(curr_df,ShowMode,features2,FeatPage,processtypes,ProcssPage,s
                 plt.show()
              
              
-                curr_df["outlier"] = ((curr_df[colname])>boxplot_outlierUB) | ((curr_df[colname]<boxplot_outlierLB))
-                
-                outliers_df = curr_df[curr_df["outlier"] == True]
-
-                display.display('Outlier raws: ')
-                display.display(outliers_df)
+         
                 
                 ############################################################################################################
             if processtypes.value == 'Imbalancedness':
