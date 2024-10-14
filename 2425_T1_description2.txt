@@ -1,0 +1,24 @@
+
+The AI4I 2020 Predictive Maintenance Dataset (ai4i2020.csv) is a synthetic dataset that reflects real predictive maintenance data encountered in industry.
+The purpose of this data set is to predict machine failure.
+See the data description below.
+
+The data set is collected from UCI, more information can be found on the web site.
+Follow the provided forms for the solution of Task 1.
+
+Variable Name        Role      Type         Description        Units    Missing Values
+--------------------------------------------------------------------------------------
+UID                  ID        Integer                           -      no
+Product ID           ID        Categorical                       -      no
+Type                 Feature   Categorical                       -      no
+Air temperature      Feature   Continuous                        K      no
+Process temperature  Feature   Continuous                        K      no
+Rotational speed     Feature   Integer                           rpm    no
+Torque               Feature   Continuous                        Nm     no
+Tool wear            Feature   Integer                           min    no
+Machine failure      Target    Integer                           -      no
+TWF                  Target    Integer                           -      no
+HDF                  Target    Integer                           -      no
+PWF                  Target    Integer                           -      no
+OSF                  Target    Integer                           -      no
+RNF                  Target    Integer                           -      no
