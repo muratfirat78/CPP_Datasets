@@ -1,0 +1,55 @@
+
+Follow the provided forms for the solution of Task 1.
+
+
+Dataset Description for Students: 
+Census Income Data
+This dataset, extracted from the 1994 U.S. Census Bureau database, is designed for binary classification tasks. 
+The goal is to predict whether a person’s income exceeds $50,000 per year (>50K) or not (<=50K),
+
+based on various demographic and economic factors. The dataset includes both continuous and categorical attributes,
+making it a great exercise in handling mixed data types in machine learning.
+
+Data Overview:
+
+Total Instances: 48,842 (after cleaning, 45,222 instances)
+Training Set: 32,561 instances
+Test Set: 16,281 instances
+Classes: >50K, <=50K
+Probability of >50K: ~24%
+Probability of <=50K: ~76%
+
+Features:
+
+Age: Continuous.
+Workclass: Categorical (Private, Self-employed, Government, etc.).
+Education: Categorical (e.g., Bachelors, HS-grad).
+Education Number: Continuous (represents years of education).
+Marital Status: Categorical (Married, Divorced, etc.).
+Occupation: Categorical (e.g., Tech-support, Sales).
+Relationship: Categorical (e.g., Husband, Wife).
+Race: Categorical (White, Black, Asian, etc.).
+Sex: Categorical (Male, Female).
+Capital Gain: Continuous.
+Capital Loss: Continuous.
+Hours-per-week: Continuous.
+Native Country: Categorical (e.g., United States, Mexico, Canada).
+Learning Objectives:
+Classification Task: Predict whether an individual earns more than $50K per year using demographic and economic features.
+Algorithms to Explore:
+Decision Trees (C4.5, ID3)
+Naive Bayes
+k-Nearest Neighbors (k-NN)
+Support Vector Machines (SVM)
+Neural Networks (if covering deep learning)
+Performance Metrics: Accuracy, Precision, Recall, F1-Score.
+
+Why This Dataset?
+Real-World Data: Derived from U.S. Census data, it provides an opportunity to work with actual demographic and economic features.
+Imbalance in Classes: With only ~24% of individuals earning more than $50K, this dataset introduces students to the challenge of working
+with imbalanced data.
+Handling Missing Data: Students will need to decide how to treat missing values or unknowns, providing practice in data cleaning.
+Mixed Data Types: The dataset contains a combination of continuous and categorical features, offering experience in feature engineering and handling different data formats.
+Relevant Papers:
+
+First cited in: "Scaling Up the Accuracy of Naive-Bayes Classifiers: a Decision-Tree Hybrid" by Ron Kohavi.
