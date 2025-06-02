@@ -1,0 +1,41 @@
+{
+  "title": "Antidiabetic Drug Prescriptions in Australia",
+  "description": "Total monthly scripts for pharmaceutical products falling under ATC code A10, as recorded by the Australian Health Insurance Commission.",
+  "source": "Medicare Australia",
+  "dataset": "PBS",
+  "data_range": {
+    "start": "1991-07",
+    "end": "2008-06",
+    "frequency": "monthly"
+  },
+  "variables": {
+    "Month": {
+      "description": "Date of the month, formatted as YYYY-MM",
+      "type": "datetime"
+    },
+    "Cost": {
+      "description": "Total cost of the drugs (in millions)",
+      "unit": "Million AUD",
+      "type": "float"
+    }
+  },
+  "transformation": {
+    "Cost": {
+      "operation": "summation",
+      "scale": "divided by 1e6 (to convert to millions)"
+    }
+  },
+  "processing_steps": [
+    "Data filtered to include only ATC code 'A10' for antidiabetic drugs",
+    "Grouped by month and total costs aggregated",
+    "Cost column rescaled to millions"
+  ],
+  "retrieval_method": {
+    "package": "tsibbledata",
+    "function": "statsmodels.api.datasets.get_rdataset",
+    "parameters": {
+      "dataset_name": "PBS",
+      "package": "tsibbledata"
+    }
+  }
+}
