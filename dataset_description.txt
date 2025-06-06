@@ -1,0 +1,17 @@
+Context
+Emotion detection from text is one of the challenging problems in Natural Language Processing. 
+The reason is the unavailability of labeled dataset and the multi-class nature of the problem. 
+Humans have a variety of emotions and it is difficult to collect enough records for each emotion and hence the problem 
+of class imbalance arises. Here we have a labeled data for emotion detection and the objective is to build an efficient model to detect emotion.
+
+Content
+The data is basically a collection of tweets annotated with the emotions behind them. 
+We have three columns tweet_id, sentiment, and content. In "content" we have the raw tweet. 
+In "sentiment" we have the emotion behind the tweet. The sentiment is the target to be predicted.
+
+Please perform a text analytics analysis following the form for Task2 and report it in a jupyter notebook
+
+Additional information:
+remember that performing a cost and benefit analysis is important within a business context. Try to imagine how
+you can associate a business value (i.e. taking Twitter as an example, or taking a marketing company as an example), then
+produce a cost and benefit analysis accordingly.
