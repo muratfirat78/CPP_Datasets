@@ -1,0 +1,44 @@
+This dataset includes recording of purchases of customers. Besides the purchase information, product details, payment, and shipping, there is also information about the customer like demographics, shopping behavior, and his/her feedback.  
+
+
+Explanation of columns: 
+
+Customer ID: A unique identifier assigned to each customer. 
+
+Age: The age of the customer in years.
+
+Gender: Indicates whether the customer is male or female.
+
+Item Purchased: The specific product that the customer bought.
+
+Category: The broader classification of the purchased item, such as clothing or footwear.
+
+
+Location: The state or region where the customer resides.
+
+Size: The size of the purchased item (e.g., S, M, L).
+
+Color: The chosen color of the purchased item./
+
+Season: The season (Winter, Spring, etc.) in which the purchase was made./
+
+Review Rating: A numerical score reflecting the customer’s satisfaction with the product.
+
+Subscription Status: Indicates whether the customer has an active subscription with the store.
+
+Shipping Type: The delivery option chosen by the customer, such as free shipping or express/
+
+Discount Applied: Shows whether a discount was used during the purchase.
+
+Promo Code Used: Specifies if the customer used a promotional code.
+
+Previous Purchases: The number of items the customer has bought before/
+
+Payment Method: The mode of payment used (Credit Card, PayPal, etc.)/
+
+Frequency of Purchases: Indicates how often the customer engages in purchasing activities.
+
+Purchase Amount (USD): The total money spent on the purchase in U.S. dollars.
+
+
+The goal of the analysis with this dataset is to predict the purchase amount for a customer who logged into the shopping system.  

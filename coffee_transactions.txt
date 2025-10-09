@@ -1,0 +1,32 @@
+This dataset contains coffee shop transactions. It includes details such as the type of coffee purchased, amount spent, payment method, date, and time of purchase. Additional attributes like weekday, month, and time of day make it useful for analyzing sales patterns, customer preferences, and payment behaviors.
+
+context:
+
+Coffee shop transaction records are included in this dataset, which collects information about what customers buy, how much they spend, how they pay, and when they make their purchases. It offers background information for examining consumer preferences, payment patterns, and sales trends over various periods and comparing payment methods across different times and seasons.
+
+Column Description:
+
+hour_of_day : The hour (0–23) when the transaction occurred.
+
+cash_type : Payment method used (e.g., cash or card).
+
+money : Amount of money spent in the transaction.
+
+coffee_name : The name/type of coffee purchased (e.g., Latte, Hot Chocolate).
+
+Time_of_Day : Categorized time of purchase (Morning, Afternoon, Evening, etc.).
+
+Weekday : The day of the week when the purchase was made (e.g., Mon, Tue).
+
+Month_name : The month of the transaction (e.g., Jan, Feb).
+
+Weekdaysort : Numerical value representing the order of weekdays (e.g., 1 = Mon, 7 = Sun).
+
+Monthsort : Numerical value representing the order of months (e.g., 1 = Jan, 12 = Dec).
+
+Date : The exact date of the transaction (YYYY-MM-DD).
+
+Time : The exact timestamp of the transaction (HH:MM:SS).
+
+
+The goal of the analysis is to predict the money spent for coffee. Note that the individual transactions should be aggregated to total purchases to coffee type!
