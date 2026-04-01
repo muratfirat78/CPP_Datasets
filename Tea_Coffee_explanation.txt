@@ -1,0 +1,22 @@
+
+
+This file contains 200,000+ records representing global tea and coffee consumption behavior across 200 countries over 10 years.
+
+Each row represents an individual-level information including demographic, behavioral, economic, and health-related attributes.
+
+Multi-dimensional behavioral insights: taste preferences, drinking habits, and lifestyle patterns. 
+Economic indicators: monthly spending, price per cup, home vs café consumption
+Health-related features: sleep hours, BMI, stress level, hydration
+Lifestyle attributes: work type, social setting, time of consumption
+
+
+
+Goal of data analysis: 
+
+Predict satisfaction level by considering the influence of other features. This analysis will be great information for the investors to figure out what kind of companies to acquire. This analysis will also be helpful for marketing department of existing companies in order to figure out which customers they should target for different product groups.  
+
+
+Note: This dataset does not represent real individuals or actual survey results. All data points are artificially generated for simulation purposes.
+ 
+
+ 
