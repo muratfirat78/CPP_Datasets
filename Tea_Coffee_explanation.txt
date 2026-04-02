@@ -15,6 +15,8 @@ Goal of data analysis:
 
 Predict satisfaction level by considering the influence of other features. This analysis will be great information for the investors to figure out what kind of companies to acquire. This analysis will also be helpful for marketing department of existing companies in order to figure out which customers they should target for different product groups.  
 
+Prediction error cost values: If the absolute value of the difference between predicted value and real target value |y_{predicted} - y_{true}| is less than 1, then the cost is zero. However if this difference is between 1 and 2, then the cost is 10$. The cost is 100$ is the difference is greater than 2. 
+
 
 Note: This dataset does not represent real individuals or actual survey results. All data points are artificially generated for simulation purposes.
  

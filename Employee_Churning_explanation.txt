@@ -6,6 +6,9 @@ The dataset comprises 14901 samples, each includes a unique Employee ID and feat
 
 This dataset is ideal for HR analytics, machine learning model development, and demonstrating advanced data analysis techniques. It provides a comprehensive and realistic view of the factors affecting employee retention, making it a valuable resource for researchers and practitioners in the field of human resources and organizational development.
 
+
+An employee is rewarded a bonus of one month salary for motivational purposes if the company wants prevent his/her churn. When an employee has unexpectedly churned, the financial loss of the company can be estimated as an amount of six month salaries of that employee. Otherwise the company does not have a financial loss due to either assigning his/her tasks to some other employees or hiring another employee with same expertise. 
+
 FEATURES:
 
 Employee ID: A unique identifier assigned to each employee.
