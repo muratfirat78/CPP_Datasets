@@ -1,0 +1,47 @@
+# Dataset Metadata — BLS Producer Price Index: Full Truckload Transportation
+# Student version
+
+id: BLS/PCU484121484121
+title: "Producer Price Index by Industry: General Freight Trucking, Long-Distance Truckload"
+
+provenance:
+  platform: U.S. Bureau of Labor Statistics (BLS)
+  fred_url: https://fred.stlouisfed.org/series/PCU484121484121
+  bls_series_id: PCU484121484121
+  creator: U.S. Bureau of Labor Statistics
+  license: Public Domain (U.S. Government Data)
+  seasonally_adjusted: false
+
+files:
+  - name: PCU484121484121.csv
+    format: CSV
+    encoding: UTF-8
+    delimiter: ","
+    num_columns: 2
+
+temporal_coverage:
+  start: "2003-12-01"
+  end: "2018-08-01"
+  granularity: monthly
+
+columns:
+  - name: observation_date
+    dtype: date
+    description: First day of each month representing the observation period
+    nullable: false
+    role: index
+
+  - name: PCU484121484121
+    dtype: float
+    description: >
+      PPI index value for long-distance full truckload general freight trucking.
+      Base period December 2003 = 100. Not seasonally adjusted.
+    nullable: false
+    role: target
+    units: index (Dec 2003 = 100)
+
+usage:
+  target_variable: PCU484121484121
+  suggested_splits:
+    train: "2005-01-01 to 2016-08-01"
+    test:  "2016-09-01 to 2018-08-01"
