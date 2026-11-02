@@ -1,0 +1,37 @@
+This dataset provides detailed information on retail orders, including sales performance, customer details, and shipment logistics. It is accompanied by a calendar reference table to enable time-series analysis and other temporal insights.
+The features are self-explaining. In this dataset your task is twofold: 
+After all necessary data preprocessing steps, 
+
+1- Analysis 1: Train a predictive model that predicts the target variable "Actual_Profit".
+2- Analysis 2: Train two predictive models, one for predicting variable "Returned" and second "Profit". Once you obtain predictions of two models for the "same" test data, find the 'actual_profit' values by multiplying predicted "Returned" and "Profit" values. This will be an alternative way of finding values in analysis 1. You need to be careful which features to select as independent features in training ML models for each "Returned" and "Profit". Also be careful to make the multiplication of values for the "same" row indices in the test data.   
+
+Finally compare your results of Analysis 1  and Analysis 2.  
+
+
+ #   Column               Non-Null Count  Dtype  
+---  ------               --------------  -----  
+ 0   Unnamed: 0           
+ 1   Row ID               
+ 2   Order ID             
+ 3   Order Date           
+ 4   Ship Date            
+ 5   Ship Mode             
+ 6   Customer ID          
+ 7   Customer Name        
+ 8   Segment               
+ 9   Country              
+ 10  City                 
+ 11  State                
+ 12  Postal Code          
+ 13  Region                
+ 14  Retail Sales People  
+ 15  Product ID            
+ 16  Category             
+ 17  Sub-Category          
+ 18  Product Name         
+ 19  Returned            Target in Analysis 2            
+ 20  Sales                
+ 21  Quantity             
+ 22  Discount             
+ 23  Profit              Target in Analysis 2                     
+ 24  Actual_Profit       Target in Analysis 1     
