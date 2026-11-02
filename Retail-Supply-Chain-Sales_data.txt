@@ -5,6 +5,9 @@ After all necessary data preprocessing steps,
 1- Analysis 1: Train a predictive model that predicts the target variable "Actual_Profit".
 2- Analysis 2: Train two predictive models, one for predicting variable "Returned" and second "Profit". Once you obtain predictions of two models for the "same" test data, find the 'actual_profit' values by multiplying predicted "Returned" and "Profit" values. This will be an alternative way of finding values in analysis 1. You need to be careful which features to select as independent features in training ML models for each "Returned" and "Profit". Also be careful to make the multiplication of values for the "same" row indices in the test data.   
 
+
+Hint: Extracting the date feature to more specific features like "year", "month", "weekofyear", "dayofweek" may be helpful. 
+
 Finally compare your results of Analysis 1  and Analysis 2.  
 
 
