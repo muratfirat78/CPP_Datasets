@@ -1,0 +1,49 @@
+DATASET
+
+
+BLS PRODUCER PRICE INDEX
+FULL TRUCKLOAD TRANSPORTATION
+MONTHLY
+2003–2018
+TRUCKING
+LOGISTICS
+PPI
+
+
+SCENARIO
+A logistics data science team at a freight brokerage has been tasked with building a demand forecasting
+system for long-distance truckload transportation. Reliable price forecasts are critical: carriers and shippers
+must negotiate contract rates months in advance, and inaccurate forecasts lead to margin erosion or lost
+capacity.
+The team has access to the U.S. Bureau of Labor Statistics Producer Price Index (PPI) for General Freight
+Trucking, Long-Distance Truckload (NAICS 484121). This monthly index tracks price changes from the
+perspective of the seller — the trucking company — and serves as a key leading indicator of freight market
+conditions.
+This is where you come in. You are hired as a data science consultant. Fresh from successfully completing
+Data Science course, you now have the skills and tools to analyse this time series, uncover seasonal
+patterns and trends, and build forecasting models that can predict future PPI values for the truckload freight
+market.
+
+DATASET DESCRIPTION
+The dataset contains a monthly time series of the BLS Producer Price Index for the long-distance full truckload
+general freight trucking industry (BLS series ID: PCU484121484121), covering the period December 2003 to
+August 2018. The index is anchored to a base of 100 in December 2003. Note that the dataset provided may
+contain data quality issues that must be identified and resolved before modelling.
+
+ATTRIBUTE DESCRIPTION
+observation_date The first calendar day of each month representing the observation period. Acts
+as the time index for the series. Format: YYYY-MM-DD.
+PCU484121484121 The PPI index value for long-distance full truckload general freight trucking
+(NAICS 484121). Base period December 2003 = 100. Higher values indicate
+rising producer prices in the trucking sector.
+
+DATA PROVENANCE
+Platform: U.S. Bureau of Labor Statistics (BLS) Series ID: PCU484121484121 License: Public Domain
+(U.S. Government Data)
+
+
+Reference:
+U.S. Bureau of Labor Statistics. Producer Price Index by Industry: General Freight Trucking, Long-Distance Truckload [PCU484121484121].
+Retrieved via FRED, Federal Reserve Bank of St. Louis.
+FRED: https://fred.stlouisfed.org/series/PCU484121484121
+BLS: https://www.bls.gov/ppi/
