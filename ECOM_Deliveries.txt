@@ -1,0 +1,22 @@
+The delivery success prediction model plays a crucial role in the e-commerce logistics industry, where accuracy in delivery success is of highest importance. 
+Delivering on time directly impacts customer satisfaction and influences their overall experience.
+
+The features of this dataset are as follows. They are explained below and also many of them are self-explaining in the context of logistics delivery. 
+The target feature is "Delivery_OnTime". Your main task with this dataset is to train Machine Learning model(s) in order to predict 
+if the delivery will be on time or not.
+
+
+ #   Column               
+---  ------                
+ 0   ID                    ID Number of Customers.
+ 1   Warehouse_block       Big Warehouse of the company is divided in to block such as A,B,C,D,E.
+ 2   Shipment_Mode         The Company Ships the products in multiple way such as Ship, Flight and Road.
+ 3   Customer_Calls        The number of calls made from enquiry for enquiry of the shipment.
+ 4   Customer_Rating       The company has rated from every customer. 1 is the lowest (Worst), 5 is the highest (Best)
+ 5   Product_Cost          Cost of the Product in US Dollars.
+ 6   Historical purchases  The Number of Prior Purchase.
+ 7   Product_Priority      The company has categorized the product in the various parameter such as low, medium, high.
+ 8   Gender                Male and Female. 
+ 9   Discount_rate         Discount offered on that specific product.
+ 10  Weight(gr)            
+ 11  Delivery_OnTime       Target      

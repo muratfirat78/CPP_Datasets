@@ -1,0 +1,27 @@
+The delivery time prediction model plays a crucial role in the logistics industry, where accuracy in delivery is of highest importance. 
+Delivery time directly impacts customer satisfaction and influences their overall experience.
+
+The features of this dataset are as follows. They are self-explaining in the context of order delivery. 
+The target feature is "Delivery_Time". Your main task with this dataset is to train Machine Learning model(s) in order to predict 
+the delivery time of an order. 
+
+ 0   ID                       
+ 1   Personal_ID              
+ 2   Age                      
+ 3   Delivery_person_Ratings 
+ 4   Origin_latitude          
+ 5   Origin_longitude         
+ 6   Destination_latitude     
+ 7   Destination_longitude    
+ 8   Order_Date               
+ 9   Time_Orderd             
+ 10  Time_Order_picked       
+ 11  Weather                  
+ 12  Traffic_Density          
+ 13  Vehicle_condition        
+ 14  Type_of_order             
+ 15  Type_of_vehicle         
+ 16  multiple_deliveries      
+ 17  Festival                 
+ 18  City                    
+ 19  Delivery_Time            
